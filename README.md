@@ -1,2 +1,9 @@
-# mmc-3
-Trzecia część kursu MMC-School 
+# MMC - 3
+
+### Skills:
+
+    -
+    -
+    -
+    -
+    -
