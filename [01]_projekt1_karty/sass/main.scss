@@ -1,0 +1,76 @@
+@use "./reset";
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: "Lato", sans-serif;
+	background: radial-gradient(
+		circle,
+		rgba(43, 44, 46, 1) 13%,
+		rgba(25, 25, 25, 1) 65%
+	);
+}
+
+.cards {
+	display: flex;
+	width: 1000px;
+
+	.card {
+		display: flex;
+		position: relative;
+		height: 800px;
+		width: 50%;
+		margin: 10px;
+		background-position: center;
+		background-size: cover;
+		border-radius: 15px;
+		box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+		text-align: center;
+		overflow: hidden;
+
+		button {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			padding: 10px;
+			background: none;
+			border: none;
+			color: white;
+			font-size: 36px;
+			text-shadow: 2px 2px 5px rgb(0, 0, 0);
+			cursor: crosshair;
+			z-index: 10;
+		}
+
+		button:hover ~ .text {
+			clip-path: circle(100% at 50% 50%);
+		}
+
+		.text {
+			position: absolute;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			background-color: rgba(0, 0, 0, 0.85);
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			padding: 80px 30px;
+			color: white;
+			font-size: 2rem;
+			clip-path: circle(0 at 50% 100%);
+			transition: clip-path 1s;
+			h1 {
+				color: rgb(207, 203, 83);
+			}
+		}
+	}
+	.ceo {
+		background-image: url("./../img/jakubsumwa.png");
+	}
+	.coo {
+		background-image: url("./../img/pawelploc.png");
+	}
+}
