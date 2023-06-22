@@ -1,0 +1,124 @@
+@use "./reset";
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background: radial-gradient(
+		circle,
+		rgba(43, 44, 46, 1) 13%,
+		rgba(25, 25, 25, 1) 65%
+	);
+	font-family: "Lato", sans-serif;
+	overflow: hidden;
+}
+
+.card {
+	position: relative;
+	height: 400px;
+	width: 800px;
+	border-radius: 15px;
+	overflow: hidden;
+	animation: fade 3s;
+
+	.text {
+		position: absolute;
+		top: 111px;
+		left: 100px;
+		height: 600px;
+		width: 600px;
+		font-size: 3.6rem;
+		color: white;
+		text-shadow: 2px 2px 5px #000;
+		overflow: hidden;
+	}
+
+	.text::before {
+		display: block;
+		position: absolute;
+		top: -60px;
+		left: 0;
+		content: "01/01/2000";
+		animation: slide-text 1s forwards;
+		animation-delay: 3s;
+	}
+
+	h1 {
+		position: absolute;
+		top: 60px;
+		left: 60px;
+		font-size: 0rem;
+		text-transform: uppercase;
+		span {
+			display: inline-block;
+			font-size: 4.5rem;
+			color: white;
+			text-shadow: 2px 2px 5px #000;
+			animation: rotate-heading 2s linear forwards;
+		}
+	}
+
+	.bg-img {
+		height: 100%;
+		width: 100%;
+		background-image: url("./../img/background.jpg");
+		background-size: cover;
+		background-position: center;
+	}
+
+	.girl {
+		position: absolute;
+		right: 0;
+		bottom: -400px;
+		width: 500px;
+
+		animation: move 3s forwards;
+	}
+}
+
+// Animations
+
+@keyframes fade {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes move {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+		bottom: 0;
+	}
+	100% {
+		bottom: 0;
+	}
+}
+
+@keyframes rotate-heading {
+	from {
+		transform: rotateY(90deg);
+		opacity: 0;
+		filter: blur(8px);
+	}
+	to {
+		transform: rotateY(0);
+		opacity: 1;
+		filter: blur(0);
+	}
+}
+
+@keyframes slide-text {
+	from {
+		top: -60px;
+	}
+	to {
+		top: 10px;
+	}
+}
