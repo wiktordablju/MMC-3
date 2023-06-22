@@ -43,10 +43,6 @@ body {
 			z-index: 10;
 		}
 
-		button:hover ~ .text {
-			clip-path: circle(100% at 50% 50%);
-		}
-
 		.text {
 			position: absolute;
 			display: flex;
@@ -66,7 +62,13 @@ body {
 				color: rgb(207, 203, 83);
 			}
 		}
+
+		button:hover ~ .text {
+			clip-path: circle(100% at 50% 50%);
+		}
 	}
+
+	// Background Images
 	.ceo {
 		background-image: url("./../img/jakubsumwa.png");
 	}
