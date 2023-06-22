@@ -79,10 +79,6 @@ body {
   cursor: crosshair;
   z-index: 10;
 }
-.cards .card button:hover ~ .text {
-  -webkit-clip-path: circle(100% at 50% 50%);
-          clip-path: circle(100% at 50% 50%);
-}
 .cards .card .text {
   position: absolute;
   display: flex;
@@ -104,6 +100,10 @@ body {
 }
 .cards .card .text h1 {
   color: rgb(207, 203, 83);
+}
+.cards .card button:hover ~ .text {
+  -webkit-clip-path: circle(100% at 50% 50%);
+          clip-path: circle(100% at 50% 50%);
 }
 .cards .ceo {
   background-image: url("./../img/jakubsumwa.png");
