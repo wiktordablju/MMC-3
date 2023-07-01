@@ -1,0 +1,194 @@
+@use "./reset";
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background: radial-gradient(
+		circle,
+		rgba(43, 44, 46, 1) 13%,
+		rgba(25, 25, 25, 1) 65%
+	);
+	font-family: "Lato", sans-serif;
+	overflow: hidden;
+}
+
+// GENERAL CLASSES
+button {
+	position: relative;
+	margin: 20px;
+	padding: 30px 50px;
+	background: none;
+	border: 1px solid #fff;
+	border-radius: 8px;
+	color: white;
+	font-size: 2.8rem;
+	text-transform: uppercase;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+button::before,
+button::after {
+	display: block;
+	position: absolute;
+	content: "";
+	transition: 0.5s;
+	z-index: -1;
+}
+
+// Slide
+.slide {
+	height: 95px;
+	width: 180px;
+
+	.span1 {
+		left: 50%;
+	}
+
+	.span2 {
+		left: -50%;
+		transition-delay: 0.1s;
+	}
+
+	.span1,
+	.span2 {
+		position: absolute;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		transition: 0.5s;
+	}
+}
+
+.slide::before {
+	width: 100%;
+	top: -10px;
+	left: 0;
+	border-top: 3px solid white;
+	transition-delay: 0.1s;
+}
+
+.slide::after {
+	height: 100%;
+	top: 0;
+	left: -10px;
+	border-left: 2px solid white;
+}
+
+.slide:hover .span1 {
+	left: 150%;
+}
+
+.slide:hover .span2 {
+	left: 50%;
+}
+
+.slide:hover::before {
+	top: 100px;
+}
+
+.slide:hover::after {
+	left: 300px;
+}
+
+// SLICE
+
+.slice::before,
+.slice::after {
+	height: 100%;
+	width: 100%;
+	background-color: royalblue;
+}
+
+.slice::before {
+	top: -50%;
+	left: -100%;
+}
+
+.slice::after {
+	bottom: -50%;
+	right: -100%;
+}
+
+.slice:hover::before {
+	left: 0;
+}
+
+.slice:hover::after {
+	right: 0;
+}
+
+// HMM
+
+.hmm {
+	border: none;
+	transition: 0.5s;
+}
+
+.hmm:hover {
+	box-shadow: 2px 3px 0 0 rgba(255, 255, 255, 0.8),
+		inset 11px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+// BORDER
+
+.border {
+	border-radius: 0;
+	overflow: visible;
+	transition: 0.8s;
+}
+
+.border::before,
+.border::after {
+	height: 100%;
+	width: 100%;
+}
+
+.border::before {
+	top: 0;
+	left: 0;
+}
+
+.border::after {
+	bottom: 0;
+	right: 0;
+}
+
+.border:hover {
+	color: #13bb4b;
+	border: 1px solid transparent;
+}
+
+.border:hover::before {
+	top: -10px;
+	left: -10px;
+	border-top: 5px solid #13bb4b;
+	border-left: 5px solid #13bb4b;
+}
+
+.border:hover::after {
+	bottom: -10px;
+	right: -10px;
+	border-bottom: 5px solid #13bb4b;
+	border-right: 5px solid #13bb4b;
+}
+
+// GLASS
+
+.glass::before {
+	top: -30px;
+	left: -200%;
+	height: 200%;
+	width: 100%;
+	background-image: linear-gradient(
+		-70deg,
+		rgba(255, 255, 255, 0.3),
+		rgba(255, 255, 255, 0)
+	);
+	transform: rotate(15deg);
+}
+
+.glass:hover::before {
+	left: 130%;
+}
