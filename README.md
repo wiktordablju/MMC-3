@@ -1,9 +1,1 @@
-# MMC - 3
-
-### Skills:
-
-    -
-    -
-    -
-    -
-    -
+# Third part of my webdev course
