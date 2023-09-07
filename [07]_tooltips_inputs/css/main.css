@@ -1,0 +1,123 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+textarea {
+  resize: vertical;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  font-size: 3.6rem;
+  background: linear-gradient(10deg, #2483ff 60%, #2c6afb 60%);
+  font-family: "Lato", sans-serif;
+  overflow: hidden;
+}
+
+.tooltip-box {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+  margin-bottom: 200px;
+}
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip::before {
+  display: none;
+  position: absolute;
+  width: 100%;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  background-color: gray;
+  font-size: 1.4rem;
+}
+
+.tooltip:hover::before {
+  display: block;
+}
+
+.tooltip-top::before {
+  content: "Tooltip u gory";
+  bottom: 130%;
+}
+
+.tooltip-right::before {
+  content: "Tooltip z prawej";
+  left: 110%;
+}
+
+.input-box {
+  position: relative;
+}
+
+input {
+  padding: 1em;
+  width: 400px;
+  border-radius: 8px;
+  border: 2px solid white;
+  background: none;
+  color: white;
+}
+
+label {
+  position: absolute;
+  top: 32%;
+  left: 2%;
+  padding: 0 0 0.5em;
+  font-size: 2rem;
+  transition: transform 0.3s;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid hotpink;
+}
+
+input:focus ~ label {
+  transform: translateY(-90%);
+  color: hotpink;
+  background-color: #2483ff;
+}/*# sourceMappingURL=main.css.map */
