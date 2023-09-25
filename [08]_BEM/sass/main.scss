@@ -1,0 +1,48 @@
+@use "./reset";
+
+body {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	color: white;
+	font-size: 2rem;
+	background: linear-gradient(10deg, #2483ff 60%, #2c6afb 60%);
+	font-family: "Lato", sans-serif;
+	overflow: hidden;
+}
+
+.card {
+	width: 400px;
+	background-color: gray;
+	border-radius: 8px;
+	overflow: hidden;
+
+	&__img {
+		width: 100%;
+	}
+
+	&__body {
+		padding: 10px 20px;
+	}
+
+	&__text {
+		margin: 20px 0;
+	}
+
+	&__btns {
+		display: flex;
+		justify-content: space-around;
+	}
+	&__btn {
+		padding: 10px 20px;
+		border: 1px solid black;
+		border-radius: 8px;
+		cursor: pointer;
+        
+		&--highlighted {
+			background-color: turquoise;
+		}
+	}
+}

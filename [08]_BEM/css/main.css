@@ -1,0 +1,84 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+textarea {
+  resize: vertical;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  font-size: 2rem;
+  background: linear-gradient(10deg, #2483ff 60%, #2c6afb 60%);
+  font-family: "Lato", sans-serif;
+  overflow: hidden;
+}
+
+.card {
+  width: 400px;
+  background-color: gray;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.card__img {
+  width: 100%;
+}
+.card__body {
+  padding: 10px 20px;
+}
+.card__text {
+  margin: 20px 0;
+}
+.card__btns {
+  display: flex;
+  justify-content: space-around;
+}
+.card__btn {
+  padding: 10px 20px;
+  border: 1px solid black;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.card__btn--highlighted {
+  background-color: turquoise;
+}/*# sourceMappingURL=main.css.map */
